@@ -1,25 +1,45 @@
-.page-header {
-    background-color: #004F29;
+header {
+    background-color: #703D57;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding: 20px 30px 30px 5%;
+    color: #F4EBEE;
+    font-size: 36pt;
 }
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+header h1, header h1 a, header h1 a:visited, header h1 a:active, header h1 a:hover {
+    color: #F4EBEE;
     font-size: 36pt;
+    font-family: 'Fredericka the Great', cursive;
     text-decoration: none;
 }
 
-.content {
-    margin-left: 40px;
+footer {
+    background-color: #703D57;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 5px 10px 10px 60px;
+    height: 40px
 }
 
-h1, h2, h3, h4 {
-    font-family: 'Corben', cursive;
+footer h4 {
+    color: #F4EBEE;
+    font-size: 12
+}
+
+div.content-container {
+  margin-left: 5%;
+  margin-right: 5%
+  height: 1000px;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Armata', sans-serif;
 }
 
 .date {
-    color: #029F54;
+    color: #957186;
+    font-size: 8pt
 }
 
 .save {
@@ -30,6 +50,7 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
+/* for add post button */
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #ffffff;
     float: right;
@@ -38,13 +59,89 @@ h1, h2, h3, h4 {
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
-.post h2 a, .post h2 a:visited {
-    color: #004F29;
+.post a h2 {
+    color: #3E2230;
+}
+
+.post a:hover {
+    text-decoration: none;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
 }
 
 .post-title {
-    color: #004F29;
+    color: #3E2230;
 }
+
+.post-detail-content {
+    padding: 5px 0 0 0;
+    font-family: "Oswald", sans-serif;
+}
+
+.img-preview {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+  padding: 5px;
+  width: 45%;
+  max-width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.img-preview:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100)
+}
+
+.post-preview {
+    padding: 12px 0 0 0;
+}
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 40px;    /* Footer height */
+}
+
+
+/* The side navigation menu */
+#sidebar {
+  margin: 0;
+  padding: 0 0 0 5%;
+  width: 100%;
+  background-color: #957186;
+  position: relative;
+  height: auto;
+  overflow: auto;
+}
+
+/* Sidebar links */
+#sidebar .button {
+  display: block;
+  color: F4EBEE;
+  padding: 16px;
+  text-decoration: none;
+  float: left;
+}
+
+/* Active/current link */
+#sidebar .active, #sidebar .button:hover {
+  background-color: #703D57;
+  color: #F4EBEE;
+}
+
+
+

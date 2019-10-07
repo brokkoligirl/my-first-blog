@@ -51,3 +51,14 @@ def post_edit(request, pk):
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
 
+
+def about_page(request):
+    return render(request, 'about.html')
+
+
+def contact_page(request):
+    return render(request, 'contact.html')
+
+
+def homepage(request):
+    return render(request, 'index.html')

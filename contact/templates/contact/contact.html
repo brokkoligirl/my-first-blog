@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<script>
+        function msg() {
+            alert("Thank you for your message!");
+        }
+</script>
+
+        <div class="post">
+            <h2>Contact</h2>
+                <form enctype="multipart/form-data" action="" method="post" class="post-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" value="Submit"
+                            class="save btn btn-default"
+                            onclick="msg()">Submit</button>
+
+                </form>
+
+        </div>
+
+{% endblock %}

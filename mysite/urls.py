@@ -19,10 +19,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from contact import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('contact/', views.contact_us, name='contact_page'),
     path('', include('blog.urls')),
 ]
 

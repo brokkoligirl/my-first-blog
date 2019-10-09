@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.core.mail import EmailMessage
+from django.forms import ValidationError
 
 from .forms import ContactForm
 
@@ -11,7 +12,8 @@ def contact_us(request):
     recipient = ['myemailadress@gmail.com']
 
     if request.method == 'POST':
-        form = ContactForm(request.POST)
+        post_data = request.POST
+        form = ContactForm(post_data, request=request)
 
         if form.is_valid():
 
@@ -20,6 +22,10 @@ def contact_us(request):
 
             message = EmailMessage(subject=f"New message from {sender_name} ({sender_email})",
                                    body=form.cleaned_data['message'], to=recipient)
+            try:
+                form.verify_recaptcha()
+            except ValidationError:
+                return HttpResponse("Validation failed.")
 
             message.send()
 

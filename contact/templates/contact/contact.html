@@ -6,15 +6,17 @@
             alert("Thank you for your message!");
         }
 </script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
         <div class="post">
             <h2>Contact</h2>
                 <form enctype="multipart/form-data" action="" method="post" class="post-form">
                     {% csrf_token %}
                     {{ form.as_p }}
+                    <div class="g-recaptcha" data-sitekey="6LcwnrwUAAAAAF38bIXy-Kxh_oXGF4NjoKjwBFZ_"></div>
+                    <br/>
                     <button type="submit" value="Submit"
-                            class="save btn btn-default"
-                            onclick="msg()">Submit</button>
+                            class="save btn btn-default">Submit</button>
 
                 </form>
 

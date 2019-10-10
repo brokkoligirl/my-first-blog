@@ -43,6 +43,9 @@ event.preventDefault();  alert("Post not removed");}}
     </div>
 
 <hr>
+
+{% if post.published_date %}
+
 <a class="btn btn-default" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
 
         {% for comment in post.comments.all %}
@@ -64,5 +67,7 @@ event.preventDefault();  alert("Post not removed");}}
         {% empty %}
             <p>No comments here yet :(</p>
         {% endfor %}
+
+{% endif %}
 
 {% endblock %}

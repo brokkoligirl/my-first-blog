@@ -9,10 +9,14 @@
                 <img class="img-preview" src="{{ post.cover.url}}" alt="{{ post.title }}">
             {% endif %}
             </a>
-            <p class="post-preview">{{ post.text|linebreaksbr }}</p>
+            <p class="post-preview">{{ post.text|linebreaksbr }} </p>
+            <p><a class="read-more" href="{% url 'post_detail' pk=post.pk %}">Read more...</a></p>
             <div class="date">
-                <p>published: {{ post.published_date }}</p>
+                <p>published: {{ post.published_date }} |
+                <a href="{% url 'post_detail' pk=post.pk %}">{{ post.approved_comments.count }} comments</a>
+                </p>
             </div>
+
         </div>
     {% endfor %}
 {% endblock %}

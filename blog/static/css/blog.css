@@ -37,9 +37,21 @@ h1, h2, h3, h4, h5 {
     font-family: 'Armata', sans-serif;
 }
 
-.date {
+a {
+ color: #957186;
+}
+
+a:hover {
+ color: #3E2230;
+}
+
+.date, .date a {
     color: #957186;
     font-size: 8pt
+}
+
+.date a:hover {
+    color: #3E2230;
 }
 
 .save {
@@ -56,7 +68,7 @@ h1, h2, h3, h4, h5 {
     margin-right: 20px;
 }
 
-.top-menu a, .glyphicon {
+.top-menu a, .top-menu .glyphicon {
     color: #F4EBEE;
 }
 
@@ -151,4 +163,6 @@ h1, h2, h3, h4, h5 {
 }
 
 
-
+.comment {
+    margin: 20px 0px 20px 20px;
+}

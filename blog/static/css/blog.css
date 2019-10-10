@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5 {
     width: 100%;
 }
 
-/* for add post button */
+/* 'add post' button */
 .top-menu, .top-menu:hover, .top-menu:visited {
     color: #ffffff;
     float: right;
@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 50px;
 }
 
-.post a h2 {
+.post h2, .post h2 a {
     color: #3E2230;
 }
 
@@ -117,7 +117,7 @@ h1, h2, h3, h4, h5 {
 }
 
 
-/* The side navigation menu */
+/* The sidebar navigation menu */
 #sidebar {
   margin: 0;
   padding: 0 0 0 5%;
